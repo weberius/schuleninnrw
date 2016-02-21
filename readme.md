@@ -1,6 +1,6 @@
 # Schulen in NRW
 
-Das Projekt Schulen in NRW liest Daten aus dem Datensatz (NRW: Grunddaten der Schulen in NRW)[https://open.nrw/de/dataset/msw_001], persistiert sie in einer relationalen Datenbank und stellt sie in Form von JSON-Strukturen zur weiteren Verwendung zur Verfügung.
+Das Projekt Schulen in NRW liest Daten aus dem Datensatz [NRW: Grunddaten der Schulen in NRW](https://open.nrw/de/dataset/msw_001), persistiert sie in einer relationalen Datenbank und stellt sie in Form von JSON-Strukturen zur weiteren Verwendung zur Verfügung.
 
 ## License
 
