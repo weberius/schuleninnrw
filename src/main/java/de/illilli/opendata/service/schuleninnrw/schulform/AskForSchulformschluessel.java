@@ -19,7 +19,7 @@ public class AskForSchulformschluessel implements AskFor<Daten> {
 	private static final Logger logger = Logger.getLogger(AskForSchulformschluessel.class);
 	private static String URL = Config.getProperty("nrw.schulen.schulformschluessel");
 
-	private Daten schluesselList;
+	private Daten daten;
 	private InputStream inputStream;
 
 	/**
@@ -50,7 +50,7 @@ public class AskForSchulformschluessel implements AskFor<Daten> {
 	private void mapData() throws JsonParseException, JsonMappingException, IOException {
 		XmlMapper mapper = new XmlMapper();
 		try {
-			schluesselList = mapper.readValue(inputStream, Daten.class);
+			daten = mapper.readValue(inputStream, Daten.class);
 		} catch (IOException e) {
 			logger.error(e);
 		}
@@ -58,7 +58,7 @@ public class AskForSchulformschluessel implements AskFor<Daten> {
 
 	@Override
 	public Daten getData() {
-		return schluesselList;
+		return daten;
 	}
 
 }
