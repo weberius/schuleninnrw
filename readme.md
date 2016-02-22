@@ -35,7 +35,7 @@ CREATE TABLE schulform (
   bezeichnung       varchar(256)
 );
 ```
-### Taeger
+### Traeger
 ```
 CREATE TABLE traeger (
   id                integer NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE traeger (
   fax               varchar(16)
 );
 ```
-### Taeger
+### Schule
 ```
 CREATE TABLE schule (
   id                      integer NOT NULL,
