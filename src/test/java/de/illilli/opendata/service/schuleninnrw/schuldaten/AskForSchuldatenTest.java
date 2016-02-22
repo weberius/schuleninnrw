@@ -50,7 +50,7 @@ public class AskForSchuldatenTest {
 		schule.Homepage = "http://www.waldorfschule-essen.de";
 		schule.Rechtsform = 2;
 		schule.Traegernummer = 70610;
-		schule.Gemeindeschluessel = 05113000;
+		schule.Gemeindeschluessel = "05113000";
 		schule.KoordinatenRechtswert = 25716820;
 		schule.KoordinatenHochwert = 56982960;
 		schule.Schulbetriebsschluessel = 1;
