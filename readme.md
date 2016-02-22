@@ -17,40 +17,28 @@ Durch Aufruf dieser Schnittstelle werden Abfragen gegen die XML-Endpoints von ht
 ### Rechtsform
 ```
 CREATE TABLE rechtsform (
-  id                varchar(16) NOT NULL,
+  id                integer NOT NULL,
   bezeichnung       varchar(256)
 );
 ```
 ### Schulbetrieb
 ```
 CREATE TABLE schulbetrieb (
-  id                varchar(16) NOT NULL,
+  id                integer NOT NULL,
   bezeichnung       varchar(256)
 );
 ```
 ### Schulform
 ```
 CREATE TABLE schulform (
-  id                varchar(16) NOT NULL,
+  id                integer NOT NULL,
   bezeichnung       varchar(256)
 );
 ```
-
-public String Traegerbezeichnung_1;
-	public String Traegerbezeichnung_2;
-	public String Traegerbezeichnung_3;
-	public String Kurzbezeichnung;
-	public int PLZ;
-	public String Ort;
-	public String Strasse;
-	public String Telefonvorwahl;
-	public String Telefon;
-	public String Faxvorwahl;
-	public String Fax;
 ### Taeger
 ```
 CREATE TABLE traeger (
-  id                varchar(16) NOT NULL,
+  id                integer NOT NULL,
   bezeichnung       varchar(1024),
   kurzbezeichnung   varchar(256),
   plz               integer,
@@ -60,7 +48,29 @@ CREATE TABLE traeger (
   fax               varchar(16)
 );
 ```
-
+### Taeger
+```
+CREATE TABLE schule (
+  id                      integer NOT NULL,
+  schulform               integer,
+  bezeichnung             varchar(1024),
+  kurzbezeichnung         varchar(256),
+  plz                     integer,
+  ort                     varchar(128),
+  strasse                 varchar(128),
+  telefon                 varchar(16),
+  fax                     varchar(16),
+  email                   varchar(64),
+  homepage                varchar(64),
+  rechtsform              integer,
+  traegernummer           integer,
+  gemeindeschluessel      integer,
+  schulbetriebsschluessel integer,
+  schulbetriebsdatum      timestamp,
+  modtime                 timestamp DEFAULT current_timestamp
+);
+SELECT AddGeometryColumn ('public','schule','geom',4326,'POINT',2);
+```
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
