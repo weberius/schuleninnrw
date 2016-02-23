@@ -71,6 +71,13 @@ CREATE TABLE schule (
 );
 SELECT AddGeometryColumn ('public','schule','geom',4326,'POINT',2);
 ```
+### Steuerungstabelle
+```
+CREATE TABLE sagsunskoeln (
+    numberofinsert      integer,
+    modtime      timestamp DEFAULT current_timestamp
+);
+```
 ## Configuration
 
 Die Konfiguration wird über die Datei
