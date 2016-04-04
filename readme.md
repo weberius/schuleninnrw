@@ -2,13 +2,17 @@
 
 Das Projekt Schulen in NRW liest Daten aus dem Datensatz [NRW: Grunddaten der Schulen in NRW](https://open.nrw/de/dataset/msw_001), persistiert sie in einer relationalen Datenbank und stellt sie über REST-Schnittstellen in Form von JSON-Strukturen zur weiteren Verwendung zur Verfügung. Weitere Informationen finden sich auf der Seite [Schulgrunddaten NRW](https://www.schulministerium.nrw.de/docs/bp/Ministerium/Open_MSW/Open_Data/index.html) des [Ministerium für Schule und Weiterbild des Landes Nordrhein Westfalen](https://www.schulministerium.nrw.de).
 
+## Status
+
+In Entwicklung/ nicht lauffähig/ nicht getestet
+
 ## Schnittstellen
 
 ### /schuleninnrw/service/put
 
 Es handelt sich um eine Schnittstelle, die per PUT angesprochen wird:
 
-    curl -X PUT http://localhost:8080/sagsunskoeln/service/put 
+    curl -X PUT http://localhost:8080/schuleninnrw/service/put 
 
 Durch Aufruf dieser Schnittstelle werden Abfragen gegen die XML-Endpoints von https://open.nrw/de/dataset/msw_001 gemacht und die Daten in die Datenbank geschrieben.
 
